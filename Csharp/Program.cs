@@ -8,5 +8,12 @@ namespace MyApp // Note: actual namespace depends on the project name.
         {
             Console.WriteLine("Hello World!");
         }
+
+        static void cw1()
+        {
+           
+        }
+
+
     }
 }
