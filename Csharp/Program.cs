@@ -11,7 +11,8 @@ namespace MyApp // Note: actual namespace depends on the project name.
 
         static void cw1()
         {
-           
+           Console.WriteLine("dupa");
+#sdadasdasdasd
         }
 
 
