@@ -1,12 +1,14 @@
 ﻿using System;
 
+
 namespace MyApp // Note: actual namespace depends on the project name.
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            cw6();
+
+            p23();
         }
 
         static void cw1()
@@ -53,6 +55,9 @@ namespace MyApp // Note: actual namespace depends on the project name.
             else if (b > c) { Console.WriteLine("liczba " + b + "jest najwieksza"); }
             else { Console.WriteLine("liczba " + c + " jest najwieksza"); }
         }
+      
+    
+        
         static void cw6()
         {
             Console.WriteLine("wprowadz liczbe zł: ");
@@ -75,6 +80,57 @@ namespace MyApp // Note: actual namespace depends on the project name.
             }
 
 
+        }
+        static void p21()
+        {
+            int suma = 0;
+            int ocena;
+            int liczba = 0;
+            for (int i = 0; i < 5; i++)
+            {
+                Console.Write("Podaj ocenę: ");
+                ocena = Convert.ToInt32(Console.ReadLine());
+                if (ocena>= 3)
+                {
+                    suma += ocena;
+                    liczba++;
+                }
+                else { continue; }
+            }
+            double srednia = suma / liczba;
+            Console.WriteLine("Śrenia z ocen wynosi: {0:N}", srednia);
+        }
+        static void p22()
+        {
+            double lokata = 0;
+            int lata = 0;
+            Console.WriteLine("Podaj kwote na lokacie: ");
+            lokata=Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Podaj na ile lat jest lokata: ");
+            lata=Convert.ToInt32(Console.ReadLine());
+            for(int i = 1; i <= lata; i++)
+            {
+                lokata = lokata + lokata * 0.06;
+            }
+            Console.WriteLine("lokata po naliczeniu odsetek wynosi: {0:F2}", lokata) ;
+        }
+        static void p23()
+        {
+            double max = Convert.ToDouble(Console.ReadLine());
+            double min = max;
+
+            for ( int i = 2; i <= 5; i++)
+            {
+                double liczba1 = Convert.ToDouble(Console.ReadLine());
+                if (liczba1 > max)
+                {
+                    max = liczba1;
+                }
+                else if(liczba1 < min) { min = liczba1; }
+                
+
+            }
+            Console.WriteLine("Najwieksza liczba to " + max + "a najmniejsza to: " + min);
         }
     }
 }
