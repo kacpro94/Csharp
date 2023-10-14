@@ -16,6 +16,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             Console.WriteLine("Wprowadz promien: ");
             double promien = double.Parse(Console.ReadLine());
             Console.WriteLine("Pole wynosi: " + Math.PI * Math.Pow(promien, 2));
+#dsa
 
         }
 
