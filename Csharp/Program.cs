@@ -8,7 +8,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
         static void Main(string[] args)
         {
 
-            p23();
+            p27();
         }
 
         static void cw1()
@@ -16,7 +16,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             Console.WriteLine("Wprowadz promien: ");
             double promien = double.Parse(Console.ReadLine());
             Console.WriteLine("Pole wynosi: " + Math.PI * Math.Pow(promien, 2));
-#dsa
+
 
         }
 
@@ -132,6 +132,85 @@ namespace MyApp // Note: actual namespace depends on the project name.
 
             }
             Console.WriteLine("Najwieksza liczba to " + max + "a najmniejsza to: " + min);
+        }
+        static void p24()
+        {
+            int k = 120;
+            double S = 1.8;
+            double d = Convert.ToDouble(Console.ReadLine());
+            double pd = 60 + (d - k) * S;
+            double max = Convert.ToDouble(Console.ReadLine());
+            double min = max;
+
+            for (int i = 2; i <= 5; i++)
+            {
+                double liczba1 = Convert.ToDouble(Console.ReadLine());
+                if (liczba1 > max)
+                {
+                    max = liczba1;
+                }
+                else if (liczba1 < min) { min = liczba1; }
+
+
+            }
+
+        }
+        static void p25()
+        {
+            Console.WriteLine("podaj liczbe");
+            int liczba=Convert.ToInt32(Console.ReadLine());
+            int wynik = 1;
+            for(int i = 1; i <= liczba; i++)
+            {
+                wynik = wynik * (i);
+            }
+            Console.WriteLine(wynik);
+        }
+        static void p26()
+        {
+           int liczba=Convert.ToInt32( Console.ReadLine());
+            int k = 0;
+           for(int i=2;i<liczba; i++)
+            {
+                if (liczba % i == 0)
+                {
+                    Console.WriteLine("to nie jest liczba pierwsza");
+                    k = k + 1;
+                    break;
+                }
+            }
+           if(k == 0)
+            {
+                Console.WriteLine("to jest l pierwsza");
+            }
+           
+        }
+        static void p27()
+        {
+            int a=Convert.ToInt32(Console.ReadLine());
+            int b=Convert.ToInt32(Console.ReadLine());
+            int k = 0;
+            for (int i=a; i<=b; i++)
+            {
+                for (int j = 2; j < i; j++)
+                {
+                    if (i % j == 0)
+                    {
+                        
+                        k = k + 1;
+                        continue;
+                    }
+                }
+                if (k == 0)
+                {
+                    Console.WriteLine(i+" to jest l. pierwsza");
+                }
+                k = 0;
+            }
+        }
+        static void p28()
+        {
+
         }
     }
 }
