@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Diagnostics.CodeAnalysis;
 
 namespace MyApp // Note: actual namespace depends on the project name.
 {
@@ -8,7 +8,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
         static void Main(string[] args)
         {
 
-            p24();
+            p34();
         }
 
         static void cw1()
@@ -168,22 +168,21 @@ namespace MyApp // Note: actual namespace depends on the project name.
 
 
 
-            static void p25()
+            static int p25(int n)
             {
-                Console.WriteLine("podaj liczbe");
-                int liczba = Convert.ToInt32(Console.ReadLine());
+               
                 int wynik = 1;
-                for (int i = 1; i <= liczba; i++)
+                for (int i = 1; i <= n; i++)
                 {
                     wynik = wynik * (i);
                 }
-                Console.WriteLine(wynik);
+            return wynik;
             }
             static void p26()
             {
                 int liczba = Convert.ToInt32(Console.ReadLine());
                 int k = 0;
-                for (int i = 2; i < liczba; i++)
+                for (int i = 2; i < Math.Sqrt(liczba); i++)
                 {
                     if (liczba % i == 0)
                     {
@@ -222,7 +221,98 @@ namespace MyApp // Note: actual namespace depends on the project name.
                 }
             }
             static void p28()
-            {//ksdsaas
+            {
+            int n = 5;
+            int k = 3;
+
+            double wynik = (p25(n) / (p25(k) * p25(n - k)));
+            Console.WriteLine(wynik);
+            }
+
+        //CWICZENIA 3
+
+        static void p31()
+        {
+            int suma = 0;
+            int ocena = 0;
+            int licznik = 0;
+            do
+            {
+                Console.Write("Podaj ocenę: ");
+                ocena = Convert.ToInt32(Console.ReadLine());
+                suma += ocena;
+                licznik += 1;
+            } while (ocena != -1);
+                if (licznik > 0)
+            {
+                double srednia = suma / (double)licznik;
+                Console.WriteLine("Śrenia z ocen wynosi: {0:N}", srednia);
+            }
+            else
+            {
+                Console.WriteLine("Brak danych do obliczenia średniej");
+            }
+        }
+        static void p32()
+        {
+            double lokata = 6000;
+            int i = 0;
+
+            while (lokata!=2*lokata)
+            {
+                lokata = lokata + (lokata * 0.06);
+                i++;
+            }
+            Console.WriteLine(i);
+        }
+        static void p33()
+        {
+            Random r = new Random();
+            int n=r.Next(1,50);
+            int liczba;
+            int i = 0;
+            do
+            {
+                liczba = Convert.ToInt32(Console.ReadLine());
+                if (liczba > n)
+                {
+                    Console.WriteLine("za duzo");
+                }
+                else { Console.WriteLine("za malo"); }
+                i++;
+            } while (liczba != n);
+
+            Console.WriteLine("brawo zgadles za "+i+" razem");
+
+        }
+        static void p34()
+        {
+            double liczba = 50;
+            double liczba1 = 50;
+            int i = 0;
+            while (liczba % 2 != 1)
+            {
+                liczba = liczba / 2;
+                i++;
+            }
+            if ((Math.Pow(2,i) != liczba1))
+            {
+                Console.WriteLine("to nie jesst potega 2");
+            }
+            else { Console.WriteLine(i); }
+            
+        }
+        static void p35()
+        {
+            int a = Convert.ToInt32(Console.ReadLine());
+            int b=Convert.ToInt32(Console.ReadLine());
+            
+        }
+        static void p36()
+        {
+            //while ((Math.PI / 4) - d)< d){
+
+            
         }
     }
 }
