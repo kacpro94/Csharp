@@ -9,7 +9,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
         static void Main(string[] args)
         {
 
-            lab1.cw1();
+            lab3.p36();
         }
 
     }

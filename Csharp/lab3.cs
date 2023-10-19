@@ -86,9 +86,20 @@ namespace Csharp
 
         }
         public static void p36()
-        {
-            //while ((Math.PI / 4) - d)< d){
 
+        {
+            double suma = 1;
+            double d = Convert.ToDouble(Console.ReadLine());
+            int n = 1;
+            double suma1 = 0;
+            while ((suma - suma1) > d) ;
+            {
+                suma1 = suma;
+                suma = suma + (1 / (n));
+                
+                n = n + 2;
+            } 
+            Console.WriteLine("liczpa pi wynosi: " + (suma * 4));
 
         }
     }
