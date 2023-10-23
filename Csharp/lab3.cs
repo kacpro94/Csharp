@@ -79,28 +79,36 @@ namespace Csharp
             else { Console.WriteLine(i); }
 
         }
-        public static void p35()
-        {
-            int a = Convert.ToInt32(Console.ReadLine());
-            int b = Convert.ToInt32(Console.ReadLine());
-
-        }
+       
         public static void p36()
-
         {
-            double suma = 1;
+            int n = 0;
+            double pi = 0;
+            Console.WriteLine("podaj dokladnosc: ");
             double d = Convert.ToDouble(Console.ReadLine());
-            int n = 1;
-            double suma1 = 0;
-            while ((suma - suma1) > d) ;
-            {
-                suma1 = suma;
-                suma = suma + (1 / (n));
-                
-                n = n + 2;
-            } 
-            Console.WriteLine("liczpa pi wynosi: " + (suma * 4));
 
+            while (true)
+            {
+                
+                double term = 1.0 / (2 * n + 1);
+
+                if (n % 2 == 0)
+                    pi += term;
+                else
+                    pi -= term;
+
+                n++;
+
+                if (term < d)
+                    break;
+            }
+
+            pi *= 4; // Mnożenie przez 4, aby uzyskać przybliżoną wartość π
+
+            Console.WriteLine($"Obliczona wartość pi: {pi}");
         }
     }
+
 }
+    
+
